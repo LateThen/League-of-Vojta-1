@@ -2,7 +2,7 @@ import { Background } from "./ui/basic-utils.js";
 import { Player } from "./player.js";
 
 const background = new Background();
-const player = new Player(600, 400);
+const player = new Player(3000, 2000);
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -75,7 +75,7 @@ const handlePlayerMovement = () => {
   if (keys["KeyD"]) {
     player.x += player.velocity;
   }
-}
+};
 
 const render = () => {};
 const fps = () => {};
