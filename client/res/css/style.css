@@ -1,7 +1,7 @@
 
 html, body {
-    cursor: none;
-    overflow: hidden;
+cursor: url("../img/ui/cursor.png"), auto;
+   overflow: hidden;
     margin: 0;
     display: flex;
     justify-content: center;

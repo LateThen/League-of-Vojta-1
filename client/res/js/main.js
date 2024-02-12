@@ -16,6 +16,18 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("keyup", (e) => {
   keys[e.code] = false;
 });
+let mouse = {
+  x: 0,
+  y: 0
+}
+document.addEventListener("click", (e) => {
+  const canvasPos = canvas.getBoundingClientRect();
+  console.log(((e.clientX - canvasPos.left) / canvasPos.width) * canvas.width);
+  console.log(((e.clientY - canvasPos.top) / canvasPos.height) * canvas.height);
+
+
+
+})
 
 const gameLoop = () => {
   //resize
@@ -49,8 +61,8 @@ const update = () => {
 };
 
 const handlePlayerMovement = () => {
-  console.log(player.x);
-  console.log(player.y);
+  //console.log(player.x);
+  //console.log(player.y);
   if (keys["KeyW"]) {
     player.y -= player.velocity;
   }
